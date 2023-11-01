@@ -1,0 +1,26 @@
+@use 'src/styles/sass/variaveis' as *;
+
+.botao {
+    align-self: center;
+    background-color: $cor-fundo-botao;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px #0000009f;
+    color: $cinza-escuro;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 1rem;
+    width: 150px;
+
+    &:active {
+        background-color: $cor-fundo-botao-ativo;
+        box-shadow: 2px 2px 4px #0000009f inset;
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .botao {
+        font-size: 2.25rem;
+        grid-column-start: span 2;
+        width: 200px;
+    }
+}
