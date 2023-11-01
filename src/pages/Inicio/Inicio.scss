@@ -1,0 +1,29 @@
+@use 'src/styles/sass/variaveis' as *;
+
+.inicio {
+    background-color: $cor-fundo;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: min-content min-content auto;
+    grid-template-areas:
+        'nova-tarefa'
+        'cronometro'
+        'tarefas';
+    min-height: calc(100vh - 2rem);
+    min-width: 320px;
+    padding: 2rem;
+    row-gap: 1.5rem;
+    width: 100%;
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        align-content: center;
+        column-gap: 4rem;
+        grid-template-columns: 750px 300px;
+        grid-template-rows: min-content min-content;
+        grid-template-areas:
+            'nova-tarefa tarefas'
+            'cronometro tarefas';
+        justify-content: center;
+        padding: 4rem;
+    }
+}
