@@ -1,0 +1,47 @@
+@use 'src/styles/sass/variaveis' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    .rotulo {
+        color: $branco;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    input {
+        background-color: $cor-fundo-input;
+        border: unset;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px #2d2b2b9f inset;
+        color: $branco;
+        padding: 0.5rem 0.75rem 0.25rem;
+        width: 100%;
+
+        &::placeholder {
+            color: $cinza;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .container {
+        width: calc(60% - 12px);
+        
+        .rotulo {
+            font-size: 2rem;
+        }
+
+        input {
+            font-size: 1.75rem;
+            height: 100%;
+        }
+
+        &:last-of-type {
+            width: 40%;
+        }
+    }
+}
