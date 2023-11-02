@@ -1,3 +1,6 @@
+import Tarefa from 'components/Tarefa'
+import './Lista.scss'
+
 const Lista = () => {
     const tarefas = [
         {
@@ -15,14 +18,11 @@ const Lista = () => {
     ]
     
     return (
-        <aside>
-            <h2>Estudos do dia</h2>
-            <ul>
+        <aside className='tarefas'>
+            <h2 className='titulo'>Estudos do dia</h2>
+            <ul className='lista'>
                 {tarefas.map((item, index) => (
-                    <li key={index}>
-                        <h3>{item.tarefa}</h3>
-                        <span>{item.tempo}</span>
-                    </li>
+                    <Tarefa key={index} {...item} />
                 ))}
             </ul>
         </aside>
