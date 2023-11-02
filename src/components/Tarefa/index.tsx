@@ -1,4 +1,4 @@
-import './Tarefa.scss'
+import styles from './Tarefa.module.scss'
 
 interface TarefaProps {
     tarefa: string
@@ -7,9 +7,9 @@ interface TarefaProps {
 
 const Tarefa = ({ tarefa, tempo }: TarefaProps) => {
     return (
-        <li className='item'>
-            <h3 className='titulo'>{tarefa}</h3>
-            <span className='tempo'>{tempo}</span>
+        <li className={styles.item}>
+            <h3 className={styles.titulo}>{tarefa}</h3>
+            <span className={styles.tempo}>{tempo}</span>
         </li>
     )
 }

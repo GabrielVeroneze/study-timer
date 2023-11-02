@@ -1,5 +1,5 @@
 import Tarefa from 'components/Tarefa'
-import './Lista.scss'
+import styles from './Lista.module.scss'
 
 const Lista = () => {
     const tarefas = [
@@ -18,9 +18,9 @@ const Lista = () => {
     ]
     
     return (
-        <aside className='tarefas'>
-            <h2 className='titulo'>Estudos do dia</h2>
-            <ul className='lista'>
+        <aside className={styles.tarefas}>
+            <h2 className={styles.titulo}>Estudos do dia</h2>
+            <ul className={styles.lista}>
                 {tarefas.map((item, index) => (
                     <Tarefa key={index} {...item} />
                 ))}

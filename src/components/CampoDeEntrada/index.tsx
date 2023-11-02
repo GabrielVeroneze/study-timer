@@ -1,4 +1,4 @@
-import './CampoDeEntrada.scss'
+import styles from './CampoDeEntrada.module.scss'
 
 interface CampoDeEntradaProps {
     label: string
@@ -7,8 +7,8 @@ interface CampoDeEntradaProps {
 
 const CampoDeEntrada = ({ label, children }: CampoDeEntradaProps) => {    
     return (
-        <div className='container'>
-            <label className='rotulo'>{label}</label>
+        <div className={styles.container}>
+            <label className={styles.rotulo}>{label}</label>
             {children}
         </div>
     )

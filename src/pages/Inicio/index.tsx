@@ -1,10 +1,10 @@
 import Formulario from "components/Formulario"
 import Lista from "components/Lista"
-import './Inicio.scss'
+import styles from './Inicio.module.scss'
 
 const Inicio = () => {
     return (
-        <main className="inicio">
+        <main className={styles.inicio}>
             <Formulario />
             <Lista />
         </main>

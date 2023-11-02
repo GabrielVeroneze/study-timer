@@ -1,8 +1,8 @@
-import './Botao.scss'
+import styles from './Botao.module.scss'
 
 const Botao = () => {
     return (
-        <button className='botao'>Botao</button>
+        <button className={styles.botao}>Botao</button>
     )
 }
 

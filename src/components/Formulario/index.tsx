@@ -1,10 +1,10 @@
 import CampoDeEntrada from 'components/CampoDeEntrada'
 import Botao from 'components/Botao'
-import './Formulario.scss'
+import styles from './Formulario.module.scss'
 
 const Formulario = () => {
     return (
-        <form className='formulario'>
+        <form className={styles.formulario}>
             <CampoDeEntrada label='Adicione um novo estudo'>
                 <input
                     type='text'
