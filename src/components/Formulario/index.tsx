@@ -1,30 +1,26 @@
-import Botao from "components/Botao"
+import CampoDeEntrada from 'components/CampoDeEntrada'
+import Botao from 'components/Botao'
+import './Formulario.scss'
 
 const Formulario = () => {
     return (
-        <form>
-            <div>
-                <label htmlFor="tarefa">Adicione um novo estudo</label>
+        <form className='formulario'>
+            <CampoDeEntrada label='Adicione um novo estudo'>
                 <input
-                    type="text"
-                    name="tarefa"
-                    id="tarefa"
-                    placeholder="O que você quer estudar"
+                    type='text'
+                    placeholder='O que você quer estudar'
                     required
                 />
-            </div>
-            <div>
-                <label htmlFor="tempo">Tempo</label>
+            </CampoDeEntrada>
+            <CampoDeEntrada label='Tempo'>
                 <input
-                    type="time"
-                    name="tempo"
-                    id="tempo"
-                    step="1"
-                    min="00:00:00"
-                    max="01:30:00"
+                    type='time'
+                    step='1'
+                    min='00:00:00'
+                    max='01:30:00'
                     required
                 />
-            </div>
+            </CampoDeEntrada>
             <Botao />
         </form>
     )

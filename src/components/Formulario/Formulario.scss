@@ -1,0 +1,21 @@
+@use 'src/styles/sass/variaveis' as *;
+
+.formulario {
+    background-color: $cor-fundo-form;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px #0000009f;
+    display: flex;
+    flex-direction: column;
+    grid-area: nova-tarefa;
+    padding: 0.75rem;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .formulario {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 2.25rem;
+        justify-content: space-around;
+        padding: 1.5rem;
+    }
+}
