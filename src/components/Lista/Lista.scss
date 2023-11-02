@@ -18,7 +18,7 @@
 }
 
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: $desktop-breakpoint) {
     .tarefas {
         .titulo {
             font-size: 2.25rem;
