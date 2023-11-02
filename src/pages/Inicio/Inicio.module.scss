@@ -14,8 +14,10 @@
     padding: 2rem;
     row-gap: 1.5rem;
     width: 100%;
+}
 
-    @media screen and (min-width: $desktop-breakpoint) {
+@media screen and (min-width: $desktop-breakpoint) {
+    .inicio {
         align-content: center;
         column-gap: 4rem;
         grid-template-columns: 750px 300px;
