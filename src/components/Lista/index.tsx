@@ -1,4 +1,4 @@
-import Tarefa from 'components/Tarefa'
+import Item from './Item'
 import styles from './Lista.module.scss'
 
 const Lista = () => {
@@ -22,7 +22,7 @@ const Lista = () => {
             <h2 className={styles.titulo}>Estudos do dia</h2>
             <ul className={styles.lista}>
                 {tarefas.map((item, index) => (
-                    <Tarefa key={index} {...item} />
+                    <Item key={index} {...item} />
                 ))}
             </ul>
         </aside>
