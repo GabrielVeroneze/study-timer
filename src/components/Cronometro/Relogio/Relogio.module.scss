@@ -1,0 +1,25 @@
+@use 'src/styles/sass/variaveis' as *;
+
+.numero {
+    background-color: #5d677c;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #2b2b2b inset;
+    color: $branco;
+    height: 4.6rem;
+    padding: 0.5rem 0.25rem;
+}
+
+.divisao {
+    color: $branco;
+    height: 4.2rem;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .numero {
+        height: 11.5rem;
+    }
+
+    .divisao {
+        height: 12.6rem;
+    }
+}
