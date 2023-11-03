@@ -1,11 +1,11 @@
-import styles from './Tarefa.module.scss'
+import styles from './Item.module.scss'
 
-interface TarefaProps {
+interface ItemProps {
     tarefa: string
     tempo: string
 }
 
-const Tarefa = ({ tarefa, tempo }: TarefaProps) => {
+const Item = ({ tarefa, tempo }: ItemProps) => {
     return (
         <li className={styles.item}>
             <h3 className={styles.titulo}>{tarefa}</h3>
@@ -14,4 +14,4 @@ const Tarefa = ({ tarefa, tempo }: TarefaProps) => {
     )
 }
 
-export default Tarefa
+export default Item
