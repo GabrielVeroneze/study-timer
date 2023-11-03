@@ -1,8 +1,14 @@
 import styles from './Botao.module.scss'
 
-const Botao = () => {
+interface BotaoProps {
+    children: string
+}
+
+const Botao = ({ children }: BotaoProps) => {    
     return (
-        <button className={styles.botao}>Botao</button>
+        <button className={styles.botao}>
+            {children}
+        </button>
     )
 }
 
