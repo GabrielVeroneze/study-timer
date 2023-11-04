@@ -1,14 +1,10 @@
+import { ITarefa } from 'interfaces/ITarefa'
 import styles from './Item.module.scss'
 
-interface ItemProps {
-    tarefa: string
-    tempo: string
-}
-
-const Item = ({ tarefa, tempo }: ItemProps) => {
+const Item = ({ nome, tempo }: ITarefa) => {
     return (
         <li className={styles.item}>
-            <h3 className={styles.titulo}>{tarefa}</h3>
+            <h3 className={styles.titulo}>{nome}</h3>
             <span className={styles.tempo}>{tempo}</span>
         </li>
     )
