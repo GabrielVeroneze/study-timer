@@ -1,23 +1,12 @@
-import { useState } from 'react'
+import { ITarefa } from 'interfaces/ITarefa';
 import Item from './Item'
 import styles from './Lista.module.scss'
 
-const Lista = () => {
-    const [tarefas, setTarefas] = useState([
-        {
-            tarefa: 'React',
-            tempo: '02:00:00',
-        },
-        {
-            tarefa: 'JavaScript',
-            tempo: '01:00:00',
-        },
-        {
-            tarefa: 'TypeScript',
-            tempo: '03:00:00'
-        }
-    ])
-    
+interface ListaProps {
+    tarefas: ITarefa[]
+}
+
+const Lista = ({ tarefas }: ListaProps) => {    
     return (
         <aside className={styles.tarefas}>
             <h2 className={styles.titulo}>Estudos do dia</h2>
