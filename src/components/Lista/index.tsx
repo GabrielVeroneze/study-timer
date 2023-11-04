@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import Item from './Item'
 import styles from './Lista.module.scss'
 
 const Lista = () => {
-    const tarefas = [
+    const [tarefas, setTarefas] = useState([
         {
             tarefa: 'React',
             tempo: '02:00:00',
@@ -15,7 +16,7 @@ const Lista = () => {
             tarefa: 'TypeScript',
             tempo: '03:00:00'
         }
-    ]
+    ])
     
     return (
         <aside className={styles.tarefas}>
