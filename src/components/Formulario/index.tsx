@@ -4,7 +4,11 @@ import CampoDeEntrada from 'components/CampoDeEntrada'
 import Botao from 'components/Botao'
 import styles from './Formulario.module.scss'
 
-const Formulario = () => {
+interface FormularioProps {
+    setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>>
+}
+
+const Formulario = ({ setTarefas }: FormularioProps) => {    
     const [tarefa, setTarefa] = useState<ITarefa>({
         nome: '',
         tempo: '00:00'
@@ -12,7 +16,7 @@ const Formulario = () => {
 
     const adicionarTarefa = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault()
-        console.log(tarefa);
+        setTarefas(tarefasAntigas => [...tarefasAntigas, tarefa]);
     }
 
     return (
