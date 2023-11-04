@@ -51,7 +51,7 @@ const Formulario = () => {
                     }
                 />
             </CampoDeEntrada>
-            <Botao>Adicionar</Botao>
+            <Botao type="submit">Adicionar</Botao>
         </form>
     )
 }
