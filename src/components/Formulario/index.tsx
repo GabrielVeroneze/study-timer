@@ -1,12 +1,8 @@
 import { useState } from 'react'
+import { ITarefa } from 'interfaces/ITarefa'
 import CampoDeEntrada from 'components/CampoDeEntrada'
 import Botao from 'components/Botao'
 import styles from './Formulario.module.scss'
-
-interface ITarefa {
-    nome: string
-    tempo: string
-}
 
 const Formulario = () => {
     const [tarefa, setTarefa] = useState<ITarefa>({
