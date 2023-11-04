@@ -6,24 +6,11 @@ import Cronometro from "components/Cronometro"
 import styles from './Inicio.module.scss'
 
 const Inicio = () => {
-    const [tarefas, setTarefas] = useState<ITarefa[]>([
-        {
-            nome: 'React',
-            tempo: '02:00:00',
-        },
-        {
-            nome: 'JavaScript',
-            tempo: '01:00:00',
-        },
-        {
-            nome: 'TypeScript',
-            tempo: '03:00:00'
-        }
-    ])
+    const [tarefas, setTarefas] = useState<ITarefa[]>([])
 
     return (
         <main className={styles.inicio}>
-            <Formulario />
+            <Formulario setTarefas={setTarefas} />
             <Lista tarefas={tarefas} />
             <Cronometro />
         </main>
