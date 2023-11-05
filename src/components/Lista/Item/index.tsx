@@ -1,11 +1,19 @@
 import { ITarefa } from 'interfaces/ITarefa'
 import styles from './Item.module.scss'
 
-const Item = ({ nome, tempo, selecionado, completado, id }: ITarefa) => {
+interface ItemProps {
+    tarefa: ITarefa
+    selecionaTarefa: (tarefa: ITarefa) => void
+}
+
+const Item = ({ tarefa, selecionaTarefa }: ItemProps) => {
     return (
-        <li className={styles.item}>
-            <h3 className={styles.titulo}>{nome}</h3>
-            <span className={styles.tempo}>{tempo}</span>
+        <li
+            className={styles.item}
+            onClick={() => selecionaTarefa(tarefa)}
+        >
+            <h3 className={styles.titulo}>{tarefa.nome}</h3>
+            <span className={styles.tempo}>{tarefa.tempo}</span>
         </li>
     )
 }
