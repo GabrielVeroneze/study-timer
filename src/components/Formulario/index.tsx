@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid'
 import { useState } from 'react'
 import { ITarefa } from 'interfaces/ITarefa'
 import CampoDeEntrada from 'components/CampoDeEntrada'
@@ -9,14 +10,29 @@ interface FormularioProps {
 }
 
 const Formulario = ({ setTarefas }: FormularioProps) => {    
-    const [tarefa, setTarefa] = useState<ITarefa>({
+    const [tarefa, setTarefa] = useState({
         nome: '',
         tempo: '00:00'
-    })    
+    })
 
     const adicionarTarefa = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault()
-        setTarefas(tarefasAntigas => [...tarefasAntigas, tarefa]);
+
+        setTarefas(tarefasAntigas => [
+            ...tarefasAntigas,
+            {
+                ...tarefa,
+                selecionado: false,
+                completado: false,
+                id: uuidv4()
+            }
+        ])
+
+        // Reseta o formulário
+        setTarefa({
+            nome: '',
+            tempo: '00:00'
+        })
     }
 
     return (
