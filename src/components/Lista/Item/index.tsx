@@ -3,7 +3,7 @@ import styles from './Item.module.scss'
 
 interface ItemProps {
     tarefa: ITarefa
-    selecionaTarefa: (tarefa: ITarefa) => void
+    selecionaTarefa: (tarefaSelecionada: ITarefa) => void
 }
 
 const Item = ({ tarefa, selecionaTarefa }: ItemProps) => {

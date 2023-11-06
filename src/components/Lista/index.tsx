@@ -4,7 +4,7 @@ import styles from './Lista.module.scss'
 
 interface ListaProps {
     tarefas: ITarefa[]
-    selecionaTarefa: (tarefa: ITarefa) => void
+    selecionaTarefa: (tarefaSelecionada: ITarefa) => void
 }
 
 const Lista = ({ tarefas, selecionaTarefa }: ListaProps) => {

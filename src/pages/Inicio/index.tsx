@@ -9,8 +9,8 @@ const Inicio = () => {
     const [tarefas, setTarefas] = useState<ITarefa[]>([])
     const [selecionado, setSelecionado] = useState<ITarefa>()
     
-    const selecionaTarefa = (tarefa: ITarefa) => {
-        setSelecionado(tarefa);
+    const selecionaTarefa = (tarefaSelecionada: ITarefa) => {
+        setSelecionado(tarefaSelecionada)
     }
 
     return (
