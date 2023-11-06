@@ -9,7 +9,10 @@ interface ItemProps {
 const Item = ({ tarefa, selecionaTarefa }: ItemProps) => {
     return (
         <li
-            className={styles.item}
+            className={`
+                ${styles.item}
+                ${tarefa.selecionado ? styles.itemSelecionado : ''}
+            `}
             onClick={() => selecionaTarefa(tarefa)}
         >
             <h3 className={styles.titulo}>{tarefa.nome}</h3>
