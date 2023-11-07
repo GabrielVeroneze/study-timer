@@ -27,7 +27,7 @@ const Inicio = () => {
                 tarefas={tarefas}
                 selecionaTarefa={selecionaTarefa}
             />
-            <Cronometro />
+            <Cronometro selecionado={selecionado} />
         </main>
     )
 }
