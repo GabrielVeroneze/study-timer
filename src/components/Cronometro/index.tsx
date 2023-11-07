@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ITarefa } from 'interfaces/ITarefa'
 import { tempoParaSegundos } from 'common/utils/time'
 import Botao from 'components/Botao'
@@ -12,9 +12,11 @@ interface CronometroProps {
 const Cronometro = ({ selecionado }: CronometroProps) => {
     const [tempo, setTempo] = useState<number>()
 
-    if (selecionado?.tempo) {
-        setTempo(tempoParaSegundos(selecionado.tempo))
-    }
+    useEffect(() => {
+        if (selecionado?.tempo) {
+            setTempo(tempoParaSegundos(selecionado.tempo))
+        }
+    }, [selecionado])
 
     return (
         <div className={styles.cronometro}>
