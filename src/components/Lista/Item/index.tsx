@@ -12,6 +12,7 @@ const Item = ({ tarefa, selecionaTarefa }: ItemProps) => {
             className={`
                 ${styles.item}
                 ${tarefa.selecionado ? styles.itemSelecionado : ''}
+                ${tarefa.completado ? styles.itemCompletado : ''}
             `}
             onClick={() => selecionaTarefa(tarefa)}
         >
