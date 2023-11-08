@@ -18,6 +18,12 @@ const Item = ({ tarefa, selecionaTarefa }: ItemProps) => {
         >
             <h3 className={styles.titulo}>{tarefa.nome}</h3>
             <span className={styles.tempo}>{tarefa.tempo}</span>
+            {tarefa.completado && (
+                <span
+                    className={styles.concluido}
+                    aria-label='tarefa completada'
+                ></span>
+            )}
         </li>
     )
 }
