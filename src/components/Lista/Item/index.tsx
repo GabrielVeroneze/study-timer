@@ -14,7 +14,7 @@ const Item = ({ tarefa, selecionaTarefa }: ItemProps) => {
                 ${tarefa.selecionado ? styles.itemSelecionado : ''}
                 ${tarefa.completado ? styles.itemCompletado : ''}
             `}
-            onClick={() => selecionaTarefa(tarefa)}
+            onClick={() => !tarefa.completado && selecionaTarefa(tarefa)}
         >
             <h3 className={styles.titulo}>{tarefa.nome}</h3>
             <span className={styles.tempo}>{tarefa.tempo}</span>
