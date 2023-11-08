@@ -7,9 +7,10 @@ import styles from './Cronometro.module.scss'
 
 interface CronometroProps {
     selecionado: ITarefa | undefined
+    finalizarTarefa: () => void
 }
 
-const Cronometro = ({ selecionado }: CronometroProps) => {
+const Cronometro = ({ selecionado, finalizarTarefa }: CronometroProps) => {
     const [tempo, setTempo] = useState<number>()
 
     useEffect(() => {
@@ -24,6 +25,7 @@ const Cronometro = ({ selecionado }: CronometroProps) => {
                 setTempo(contador - 1)
                 return regressiva(contador - 1)
             }
+            finalizarTarefa()
         }, 1000)
     }
 
