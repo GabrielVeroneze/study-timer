@@ -26,7 +26,7 @@ const Cronometro = ({ selecionado }: CronometroProps) => {
             <div className={styles.container}>
                 <Relogio tempo={tempo} />
             </div>
-            <Botao>Começar!</Botao>
+            <Botao onClick={() => regressiva(tempo)}>Começar!</Botao>
         </div>
     )
 }
