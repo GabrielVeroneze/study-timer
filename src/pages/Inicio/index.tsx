@@ -20,6 +20,24 @@ const Inicio = () => {
         ))
     }
 
+    const finalizarTarefa = () => {
+        if (selecionado) {
+            setTarefas(tarefasAnteriores => (
+                tarefasAnteriores.map(tarefa => {
+                    if (tarefa.id === selecionado.id) {
+                        return {
+                            ...tarefa,
+                            selecionado: false,
+                            completado: true
+                        }
+                    }
+                    return tarefa
+                })
+            ))
+            setSelecionado(undefined)
+        }
+    }
+
     return (
         <main className={styles.inicio}>
             <Formulario setTarefas={setTarefas} />
